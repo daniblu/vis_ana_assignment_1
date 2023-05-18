@@ -36,7 +36,7 @@ The figure below indicates that an image search algorithm based on colour histog
 ![](out/top5imagesIMG0001.png)
 
 ### Setup
-The script requires the following to be run from a terminal:
+Unzip ``flowers`` in ``data``. The script requires the following to be run from a terminal:
 
 ```shell 
 bash setup.sh
