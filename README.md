@@ -32,7 +32,7 @@ The code written for this assignment can be found within the scripts of the ``sr
 
 - __histo_search.py__: The script compares the colour histogram of the image titled ``image_0001.jpg`` in ``data/flowers`` to the colour histograms of all the other images in the folder. It produces a ``.csv`` in ``out``, indicating the filenames of the five most similar images with their computed distances to the main image along with a ``.png`` showing the chosen image and the five closest images.
 
-- __embedding_search.py__: The script calculates the cosine distance between the VGG16 word embedding of the image titled ``image_0001.jpg`` and embeddings for all the other images in ``data/flowers``. It produces the same output at as ``histo_search.py``.
+- __embedding_search.py__: The script calculates the cosine distance between the VGG16 word embedding of the image titled ``image_0001.jpg`` and embeddings for all the other images in ``data/flowers``. It produces the same output at as ``histo_search.py``. It will also save a ``.pkl`` in ``data`` containing the calculated image embeddings, which will be re-used if the script is run again.
 
 ### Results
 The figure below indicates that an image search algorithm based on colour histograms is not exactly finding the images that a human would consider to be visually closest. None of the resulting images picture the species of the chosen image.
