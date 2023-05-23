@@ -1,7 +1,7 @@
+print('[INFO]: Importing packages')
 import os
 import cv2
 import pandas as pd
-import numpy as np
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 
@@ -44,7 +44,7 @@ def main():
     top = df.iloc[:6,]
 
     # write csv
-    top.to_csv(os.path.join("..", "out", "top5imagesIMG0001.csv"), index=False)
+    top.to_csv(os.path.join("..", "out", "top5histosIMG0001.csv"), index=False)
 
     # make figure of chosen flower along with five closets images
     ## prepare list of images
@@ -72,7 +72,7 @@ def main():
         plt.title(f"{titles[i]}")
 
     plt.tight_layout()
-    plt.savefig(os.path.join("..","out","top5imagesIMG0001.png"))
+    plt.savefig(os.path.join("..","out","top5histosIMG0001.png"))
 
 if __name__ == "__main__":
     main()

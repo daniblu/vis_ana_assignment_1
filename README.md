@@ -28,15 +28,24 @@ For this exercise, you should write some code which does the following:
 
 ## Student edit
 ### Solution
-The file ```image_comparison.py``` in the ```src``` directory contains code that does the task described above. The script is designed to be parsed from a terminal. It compares the colour histogram of the image titled ```image_0001.jpg``` in ```data/flowers``` to the colour histograms of all the other images in the directory and produces a ```.csv``` in ```out```, indicating the filenames of the five most similar images with their computed distances to the main image along with a ```.png``` showing the chosen image and the five closests images.
+The code written for this assignment can be found within the scripts of the ``src`` folder. Here follows a description of the funcionality of each script:
+
+- __histo_search.py__: The script compares the colour histogram of the image titled ``image_0001.jpg`` in ``data/flowers`` to the colour histograms of all the other images in the folder. It produces a ``.csv`` in ``out``, indicating the filenames of the five most similar images with their computed distances to the main image along with a ``.png`` showing the chosen image and the five closest images.
+
+- __embedding_search.py__: The script calculates the cosine distance between the VGG16 word embedding of the image titled ``image_0001.jpg`` and embeddings for all the other images in ``data/flowers``. It produces the same output at as ``histo_search.py``.
 
 ### Results
 The figure below indicates that an image search algorithm based on colour histograms is not exactly finding the images that a human would consider to be visually closest. None of the resulting images picture the species of the chosen image.
 
-![](out/top5imagesIMG0001.png)
+![](out/top5histosIMG0001.png)
+
+
+Alternatively, using image word embeddings in a search algorithm returns images that seem far more visually close to the target image as seen below. This is probably due to the fact that image embeddings encode information from the image besides only colours.
+
+![](out/top5embedsIMG0001.png)
 
 ### Setup
-Unzip ``flowers`` in ``data``. The script requires the following to be run from a terminal:
+Unzip ``flowers`` in ``data``. The scripts requires the following to be run from a terminal:
 
 ```shell 
 bash setup.sh
